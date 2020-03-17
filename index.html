@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高輪ゲートウェイ</title>
+    <style>
+        body{
+            font-family:serif;
+            background-color:#dddddd;
+            color:#ffffff;
+            margin:0;
+            
+        }
+        .takanawa {
+            position: relative;
+            height: 40vh;
+            background-color: #008000;
+            text-align:center;
+            font-size:20vh;
+        }
+        .takanawa p {
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="takanawa">
+        <p id="text"></p>
+    </div>
+    <script>
+        const takanawa=["高輪","ゲート","ウェイ"] ///ズンドコ風配列
+        for(let i=1;i<4;i++){
+            let random = Math.floor( Math.random() * takanawa.length );///ランダム
+            document.getElementById("text").innerHTML+=takanawa[random]///innerHTMLで挿入
+        }
+    </script>
+</body>
+</html>
